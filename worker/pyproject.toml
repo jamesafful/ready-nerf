@@ -1,0 +1,13 @@
+[project]
+name = "nerf-recon-worker"
+version = "0.1.0"
+dependencies = [
+  "celery==5.4.0",
+  "redis==5.0.8",
+  "pydantic==2.8.2",
+  # Nerfstudio (installs torch, etc). Pinning is optional; if you prefer, pin a known-good version.
+  "nerfstudio",
+]
+
+[tool.setuptools]
+packages = ["worker"]
